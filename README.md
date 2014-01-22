@@ -13,11 +13,12 @@ brew install portaudio
 brew install mpg123
 
 bundle install
+cp .env.example .env
 ```
 
 ## Get in action!
 
 ```console
-FROM=2014-01-23 TO=2014-01-26 PROJECT=Project EMAIL=youremail@domain.com PASSWORD=password ruby rocky_balboa.rb
+FROM=2014-01-23 TO=2014-01-26 ruby rocky_balboa.rb
 ```
 

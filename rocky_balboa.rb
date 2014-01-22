@@ -1,9 +1,10 @@
 require 'rubygems'
+require 'active_support/all'
+require 'audite'
+require 'dotenv'
 require 'capybara'
 require 'capybara/dsl'
 require 'capybara/poltergeist'
-require 'active_support/all'
-require 'audite'
 
 module Capybara::Poltergeist
   class Client
@@ -44,6 +45,8 @@ end
 Capybara.current_driver = :poltergeist
 Capybara.run_server = false
 Capybara.app_host = 'http://punchlock.herokuapp.com'
+
+Dotenv.load
 
 module RockyBalboa
   class Puncher
