@@ -5,10 +5,12 @@
 - Ruby 2.0
 - Portaudio >= 19
 - Mpg123 >= 1.14
+- PhantomJS
 
 
 ### OSX Install
 ```console
+brew install phantomjs
 brew install portaudio
 brew install mpg123
 
