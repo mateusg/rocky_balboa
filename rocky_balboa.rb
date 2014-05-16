@@ -95,18 +95,18 @@ module RockyBalboa
 
       visit('/punches/new')
 
-      fill_in 'punch[from(4i)]', with: start_hour
-      fill_in 'punch[to(4i)]', with: end_hour
-      fill_in 'when_day', with: date.to_s
+      fill_in 'punch[from_time]', with: "#{start_hour}:00"
+      fill_in 'punch[to_time]', with: "#{end_hour}:00"
+      fill_in 'punch[when_day]', with: date.to_s
       select project, from: 'punch[project_id]'
 
-      click_button 'Create Punch'
+      click_button 'Criar Punch'
     end
 
     def login!
       visit('/users/sign_in')
 
-      fill_in 'Email', with: @email
+      fill_in 'E-mail', with: @email
       fill_in 'Password', with: @password
 
       click_button 'Sign in'
