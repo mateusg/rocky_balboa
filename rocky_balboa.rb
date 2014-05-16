@@ -39,7 +39,7 @@ class WarningSuppressor
 end
 
 Capybara.register_driver :poltergeist do |app|
-  Capybara::Poltergeist::Driver.new(app, js_errors: false, phantomjs_logger: WarningSuppressor)
+  Capybara::Poltergeist::Driver.new(app, js_errors: false, phantomjs_logger: WarningSuppressor, timeout: 50)
 end
 
 Capybara.current_driver = :poltergeist
